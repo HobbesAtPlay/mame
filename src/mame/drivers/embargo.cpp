@@ -57,7 +57,7 @@ UINT32 embargo_state::screen_update_embargo(screen_device &screen, bitmap_rgb32 
 
 		for (i = 0; i < 8; i++)
 		{
-			pen_t pen = (data & 0x01) ? rgb_t::white : rgb_t::black;
+			pen_t pen = (data & 0x01) ? RGB_T__WHITE : RGB_T__BLACK;
 			bitmap.pix32(y, x) = pen;
 
 			data = data >> 1;

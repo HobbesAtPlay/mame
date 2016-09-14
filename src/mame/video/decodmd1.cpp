@@ -297,14 +297,14 @@ UINT32 decodmd_type1_device::screen_update( screen_device &screen, bitmap_rgb32 
 				else if (data1 & 0x01) // both are the same, so either high intensity or none at all
 					col = rgb_t(0xff,0xaa,0x00);
 				else
-					col = rgb_t::black;
+					col = RGB_T__BLACK;
 				bitmap.pix32(y,x+dot) = col;
 				if((data2 & 0x01) != (data4 & 0x01))
 					col = rgb_t(0x7f,0x55,0x00);
 				else if (data2 & 0x01) // both are the same, so either high intensity or none at all
 					col = rgb_t(0xff,0xaa,0x00);
 				else
-					col = rgb_t::black;
+					col = RGB_T__BLACK;
 				bitmap.pix32(y,x+dot+1) = col;
 				data1 >>= 1;
 				data2 >>= 1;

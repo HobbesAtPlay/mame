@@ -86,8 +86,8 @@ public:
 
 PALETTE_INIT_MEMBER(quizshow_state, quizshow)
 {
-	palette.set_indirect_color(0, rgb_t::black);
-	palette.set_indirect_color(1, rgb_t::white);
+	palette.set_indirect_color(0, RGB_T__BLACK);
+	palette.set_indirect_color(1, RGB_T__WHITE);
 
 	// normal, blink/off, invert, blink+invert
 	const int lut_pal[16] = {

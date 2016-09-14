@@ -443,7 +443,7 @@ SCN2674_DRAW_CHARACTER_MEMBER(octopus_state::display_pixels)
 		UINT8 tile = m_vram[address & 0x1fff];
 		UINT8 data = m_fontram[(tile * 16) + linecount];
 		for (int z=0;z<8;z++)
-			bitmap.pix32(y,x + z) = BIT(data,z) ? rgb_t::white : rgb_t::black;
+			bitmap.pix32(y,x + z) = BIT(data,z) ? RGB_T__WHITE : RGB_T__BLACK;
 	}
 }
 

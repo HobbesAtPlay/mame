@@ -1146,7 +1146,7 @@ UINT32 pet_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, con
 
 MC6845_BEGIN_UPDATE( pet_state::pet_begin_update )
 {
-	bitmap.fill(rgb_t::black);
+	bitmap.fill(RGB_T__BLACK);
 }
 
 MC6845_UPDATE_ROW( pet80_state::pet80_update_row )
@@ -1481,7 +1481,7 @@ static MACHINE_CONFIG_START( pet, pet_state )
 	MCFG_M6502_DISABLE_DIRECT() // address decoding is 100% dynamic, no RAM/ROM banks
 
 	// video hardware
-	MCFG_SCREEN_ADD_MONOCHROME(SCREEN_TAG, RASTER, rgb_t::green)
+	MCFG_SCREEN_ADD_MONOCHROME(SCREEN_TAG, RASTER, RGB_T__GREEN)
 	MCFG_SCREEN_REFRESH_RATE(60)
 	MCFG_SCREEN_VBLANK_TIME(ATTOSECONDS_IN_USEC(2500))
 	MCFG_SCREEN_SIZE(320, 200)
@@ -1905,7 +1905,7 @@ static MACHINE_CONFIG_START( pet80, pet80_state )
 	MCFG_M6502_DISABLE_DIRECT() // address decoding is 100% dynamic, no RAM/ROM banks
 
 	// video hardware
-	MCFG_SCREEN_ADD_MONOCHROME(SCREEN_TAG, RASTER, rgb_t::green)
+	MCFG_SCREEN_ADD_MONOCHROME(SCREEN_TAG, RASTER, RGB_T__GREEN)
 	MCFG_SCREEN_REFRESH_RATE(60)
 	MCFG_SCREEN_VBLANK_TIME(ATTOSECONDS_IN_USEC(2500))
 	MCFG_SCREEN_SIZE(640, 250)

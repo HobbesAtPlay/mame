@@ -354,14 +354,14 @@ INPUT_PORTS_END
 
 static const rgb_t PALETTE_PC8001[] =
 {
-	rgb_t::black,
+	RGB_T__BLACK,
 	rgb_t(0x00, 0x00, 0xff),
 	rgb_t(0xff, 0x00, 0x00),
 	rgb_t(0xff, 0x00, 0xff),
 	rgb_t(0x00, 0xff, 0x00),
 	rgb_t(0x00, 0xff, 0xff),
 	rgb_t(0xff, 0xff, 0x00),
-	rgb_t::white
+	RGB_T__WHITE
 };
 
 UPD3301_DRAW_CHARACTER_MEMBER( pc8001_state::pc8001_display_pixels )

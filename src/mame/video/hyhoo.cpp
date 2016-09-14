@@ -248,7 +248,7 @@ UINT32 hyhoo_state::screen_update_hyhoo(screen_device &screen, bitmap_rgb32 &bit
 	if (m_dispflag)
 		copybitmap(bitmap, m_tmpbitmap, m_flipscreen, m_flipscreen, 0, 0, cliprect);
 	else
-		bitmap.fill(rgb_t::black, cliprect);
+		bitmap.fill(RGB_T__BLACK, cliprect);
 
 	return 0;
 }

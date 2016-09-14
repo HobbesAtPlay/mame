@@ -166,7 +166,7 @@ UINT32 dai3wksi_state::screen_update_dai3wksi(screen_device &screen, bitmap_rgb3
 
 		for (int i = 0; i <= 3; i++)
 		{
-			rgb_t pen = (data & (1 << i)) ? m_palette->pen_color(color) : rgb_t::black;
+			rgb_t pen = (data & (1 << i)) ? m_palette->pen_color(color) : RGB_T__BLACK;
 
 			if (m_dai3wksi_flipscreen)
 				bitmap.pix32(255-y, 255-x) = pen;

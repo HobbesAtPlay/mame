@@ -813,7 +813,7 @@ void menu_machine_configure::custom_render(void *selectedref, float top, float b
 	for (auto & elem : text)
 	{
 		ui().draw_text_full(container(), elem.c_str(), 0.0f, 0.0f, 1.0f, ui::text_layout::CENTER, ui::text_layout::TRUNCATE,
-			mame_ui_manager::NONE, rgb_t::white, rgb_t::black, &width, nullptr);
+			mame_ui_manager::NONE, RGB_T__WHITE, RGB_T__BLACK, &width, nullptr);
 		width += 2 * UI_BOX_LR_BORDER;
 		maxwidth = std::max(maxwidth, width);
 	}
@@ -959,7 +959,7 @@ void menu_plugins_configure::custom_render(void *selectedref, float top, float b
 	float width;
 
 	ui().draw_text_full(container(), _("Plugins"), 0.0f, 0.0f, 1.0f, ui::text_layout::CENTER, ui::text_layout::TRUNCATE,
-		mame_ui_manager::NONE, rgb_t::white, rgb_t::black, &width, nullptr);
+		mame_ui_manager::NONE, RGB_T__WHITE, RGB_T__BLACK, &width, nullptr);
 	width += 2 * UI_BOX_LR_BORDER;
 	float maxwidth = std::max(origx2 - origx1, width);
 

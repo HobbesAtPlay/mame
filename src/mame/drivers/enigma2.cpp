@@ -329,7 +329,7 @@ UINT32 enigma2_state::screen_update_enigma2a(screen_device &screen, bitmap_rgb32
 			video_data = video_data >> 1;
 		}
 
-		pen = bit ? rgb_t::white : rgb_t::black;
+		pen = bit ? RGB_T__WHITE : RGB_T__BLACK;
 		bitmap.pix32(bitmap_y, x) = pen;
 
 		/* next pixel */

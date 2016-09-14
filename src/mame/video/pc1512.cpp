@@ -13,7 +13,7 @@
 
 static const rgb_t PALETTE_1512[] =
 {
-	rgb_t::black,
+	RGB_T__BLACK,
 	rgb_t(0x00, 0x00, 0xaa),
 	rgb_t(0x00, 0xaa, 0x00),
 	rgb_t(0x00, 0xaa, 0xaa),
@@ -28,7 +28,7 @@ static const rgb_t PALETTE_1512[] =
 	rgb_t(0xff, 0x55, 0x55),
 	rgb_t(0xff, 0x55, 0xff),
 	rgb_t(0xff, 0xff, 0x55),
-	rgb_t::white
+	RGB_T__WHITE
 };
 
 static const int PALETTE_0[] = { 0, 3, 5, 7 };
@@ -580,7 +580,7 @@ UINT32 pc1512_state::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, 
 	}
 	else
 	{
-		bitmap.fill(rgb_t::black, cliprect);
+		bitmap.fill(RGB_T__BLACK, cliprect);
 	}
 
 	return 0;

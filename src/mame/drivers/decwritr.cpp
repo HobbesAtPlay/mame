@@ -40,7 +40,7 @@ public:
 	//required_device<generic_terminal_device> m_terminal;
 	UINT32 screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 	{
-		bitmap.fill(rgb_t::black);
+		bitmap.fill(RGB_T__BLACK);
 		return 0;
 	}
 	DECLARE_READ8_MEMBER(la120_KBD_r);

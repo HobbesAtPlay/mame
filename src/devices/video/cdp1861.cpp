@@ -201,7 +201,7 @@ WRITE8_MEMBER( cdp1861_device::dma_w )
 
 	for (x = 0; x < 8; x++)
 	{
-		pen_t color = BIT(data, 7) ? rgb_t::white : rgb_t::black;
+		pen_t color = BIT(data, 7) ? RGB_T__WHITE : RGB_T__BLACK;
 		m_bitmap.pix32(y, sx + x) = color;
 		data <<= 1;
 	}
@@ -247,7 +247,7 @@ UINT32 cdp1861_device::screen_update(screen_device &screen, bitmap_rgb32 &bitmap
 	}
 	else
 	{
-		bitmap.fill(rgb_t::black, cliprect);
+		bitmap.fill(RGB_T__BLACK, cliprect);
 	}
 	return 0;
 }

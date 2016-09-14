@@ -647,7 +647,7 @@ UINT32 i8275_device::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, 
 {
 	if (!(m_status & ST_VE))
 	{
-		m_bitmap.fill(rgb_t::black);
+		m_bitmap.fill(RGB_T__BLACK);
 	}
 
 	copybitmap(bitmap, m_bitmap, 0, 0, 0, 0, cliprect);

@@ -766,7 +766,7 @@ void scn2674_device::device_timer(emu_timer &timer, device_timer_id id, int para
 UINT32 scn2674_device::screen_update(screen_device &screen, bitmap_rgb32 &bitmap, const rectangle &cliprect)
 {
 	if (!m_display_enabled)
-		m_bitmap.fill(rgb_t::black);
+		m_bitmap.fill(RGB_T__BLACK);
 	else
 		copybitmap(bitmap, m_bitmap, 0, 0, 0, 0, cliprect);
 

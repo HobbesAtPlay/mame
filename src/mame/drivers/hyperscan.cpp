@@ -515,7 +515,7 @@ UINT32 hyperscan_state::spg290_screen_update(screen_device &screen, bitmap_rgb32
 	}
 	else
 	{
-		bitmap.fill(rgb_t::black, cliprect);
+		bitmap.fill(RGB_T__BLACK, cliprect);
 	}
 
 	return 0;

@@ -18,6 +18,16 @@
 
 
 //**************************************************************************
+//  CONSTANTS
+//**************************************************************************
+
+#define RGB_T__BLACK		rgb_t(0, 0, 0)
+#define RGB_T__WHITE		rgb_t(255, 255, 255)
+#define RGB_T__GREEN		rgb_t(0, 255, 0)
+#define RGB_T__AMBER		rgb_t(247, 170, 0)
+#define RGB_T__TRANSPARENT	rgb_t(0, 0, 0, 0)
+
+//**************************************************************************
 //  TYPE DEFINITIONS
 //**************************************************************************
 
@@ -74,13 +84,6 @@ public:
 	static UINT8 clamp(INT32 value) { return (value < 0) ? 0 : (value > 255) ? 255 : value; }
 	static UINT8 clamphi(INT32 value) { return (value > 255) ? 255 : value; }
 	static UINT8 clamplo(INT32 value) { return (value < 0) ? 0 : value; }
-
-	// constants
-	static const rgb_t black;
-	static const rgb_t white;
-	static const rgb_t green;
-	static const rgb_t amber;
-	static const rgb_t transparent;
 
 private:
 	UINT32  m_data;
@@ -163,8 +166,8 @@ public:
 	void set_gamma(float gamma);
 
 	// entry getters
-	rgb_t entry_color(UINT32 index) const { return (index < m_numcolors) ? m_entry_color[index] : rgb_t::black; }
-	rgb_t entry_adjusted_color(UINT32 index) const { return (index < m_numcolors * m_numgroups) ? m_adjusted_color[index] : rgb_t::black; }
+	rgb_t entry_color(UINT32 index) const { return (index < m_numcolors) ? m_entry_color[index] : RGB_T__BLACK; }
+	rgb_t entry_adjusted_color(UINT32 index) const { return (index < m_numcolors * m_numgroups) ? m_adjusted_color[index] : RGB_T__BLACK; }
 	float entry_contrast(UINT32 index) const { return (index < m_numcolors) ? m_entry_contrast[index] : 1.0f; }
 
 	// entry setters
@@ -275,6 +278,5 @@ inline rgb_t pal444(UINT32 data, UINT8 rshift, UINT8 gshift, UINT8 bshift) { ret
 inline rgb_t pal555(UINT32 data, UINT8 rshift, UINT8 gshift, UINT8 bshift) { return rgbexpand<5,5,5>(data, rshift, gshift, bshift); }
 inline rgb_t pal565(UINT32 data, UINT8 rshift, UINT8 gshift, UINT8 bshift) { return rgbexpand<5,6,5>(data, rshift, gshift, bshift); }
 inline rgb_t pal888(UINT32 data, UINT8 rshift, UINT8 gshift, UINT8 bshift) { return rgbexpand<8,8,8>(data, rshift, gshift, bshift); }
-
 
 #endif  // __PALETTE_H__
